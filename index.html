@@ -4,52 +4,94 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Dkellycollins.github.io by dkellycollins</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
+	<!--<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">-->
+	<link href="stylesheets/bootstrap.min.css" rel="stylesheet">
+	<!--<link rel="stylesheet" href="stylesheets/styles.css">-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+	<!--<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>-->
+	<script src="javascripts/jquery-2.1.0.min.js"></script>
+	<!--<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>-->
+	<script src="javascripts/bootstrap.min.js"></script>
+    <!--<script src="javascripts/respond.js"></script>-->
+	<script src="javascripts/panel-slider.js"></script>
     <script src="javascripts/google-analytics.js"></script>
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   </head>
   <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/dkellycollins">View On GitHub</a></li>
-          <li class="downloads"><a href="resume.html">Resume</a></li>
-        </nav>
-      </div><!-- end header -->
-    <div class="wrapper">
+    <div id="header">
+        <nav class="navbar navbar-default" role="navigation">
+		  <div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <a class="navbar-brand" href="#">Devin Kelly-Collins</a>
+			</div>
 
-      <section>
-        <div id="title">
-          <span style="float: left;">
-            <img src="http://www.gravatar.com/avatar/03ab4eac71cfec286a7b0cd74f3915b0"/>
-          </span>
-          <h1 style="padding-top:20px; padding-bottom:20px;">Devin Kelly-Collins</h1>
-          <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/dkellycollins">dkellycollins</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></span>
-        </div>
-        <div id="about">
-        	<h3>About Me</h3>
-        	<p>I am currently attending K-State to get my Bachalors Degree in Computer Science. Through work, class project, and personal interest I have experience with C#, Java, game development, and web development. My current interests include developing high end web applications.</p>
-        	<h3>Work</h3>
-        	<p>I am currently working with Surface Systems and Instruments developing and maintaining Windows applications and Google App Engine applications. I have also held multiple positions at K-State including a Lab Consultant for the Engineering department and a Research Assitant with the Computer Science department. I have also held an internship with Cerner.</p>
-        	<h3>Projects</h3>
-        	<ul>
-				<li>Castle Crossing: I am developing a game using unity. This game will be a casual game that will react to the player's actions.</li>
-				<li>Pokewar: Another game that I am developing when I have the time. This game takes a pokemon twist on war.</li>
-				<li>jQuery File upload MVC4 example: When I built a web site with K-State I used the jQuery File upload tool. My example makes use of data bindings to deal with the post and get data packets.</li>
-			</ul>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			  <ul class="nav navbar-nav">
+				<li><a href="https://github.com/dkellycollins">Github</a></li>
+				<li><a href="\resume">Resume</a></li>
+			  </ul>
+			</div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+      </div><!-- end header -->
+	<div id="title">
+	</div>
+	<div class="container">
+		<div id="about" class="panel panel-default">
+			<a name="about"></a>
+			<div class="panel-heading">
+				<h3 class="panel-title">About Me</h3>
+			</div>
+			<div class="panel-body">
+				<p>I am currently attending K-State to get my Bachalors Degree in Computer Science. Through work, class project, and personal interest I have experience with C#, Java, game development, and web development. My current interests include developing high end web applications.</p>
+			</div>
+			<div class="panel-footer clearfix">
+				<a class="pull-right" href="#work">Next</a>
+			</div>
 		</div>
-        </section>
-        <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    </div>    
+		<div id="work" class="panel panel-default">
+			<a name="work"></a>
+			<div class="panel-heading">
+				<h3 class="panel-title">Work</h3>
+			</div>
+			<div class="panel-body">
+				<p>I am currently working with Surface Systems and Instruments developing and maintaining Windows applications and Google App Engine applications. I have also held multiple positions at K-State including a Lab Consultant for the Engineering department and a Research Assitant with the Computer Science department. I have also held an internship with Cerner.</p>
+			</div>
+			<div class="panel-footer clearfix">
+				<a class="pull-left" href="#about"> Prev</a>
+				<a class="pull-right" href="#projects">Next</a>
+			</div>
+		</div>
+		<div id="projects" class="panel panel-default">
+			<a name="projects"></a>
+			<div class="panel-heading">
+				<h3 class="panel-title">Projects</h3>
+			</div>
+			<div class="panel-body">
+				<ul>
+					<li>Castle Crossing: I am developing a game using unity. This game will be a casual game that will react to the player's actions.</li>
+					<li>Pokewar: Another game that I am developing when I have the time. This game takes a pokemon twist on war.</li>
+					<li>jQuery File upload MVC4 example: When I built a web site with K-State I used the jQuery File upload tool. My example makes use of data bindings to deal with the post and get data packets.</li>
+				</ul>
+			</div>
+			<div class="panel-footer clearfix">
+				<a class="pull-left" href="#work">Prev</a>
+			</div>
+		</div>
+	</div>
+	<!--[if !IE]><script>fixScale(document);</script><![endif]-->   
   </body>
 </html>
