@@ -13,7 +13,8 @@
                 "Name": "Kansas State University",
                 "Location": "Manhattan, KS",
                 "Degree": "Bachelor of Science in Computer Science",
-                "Graduation": "01-12-2014"
+                "GraduationDate": "2014-01-12",
+                "GPA": 3.119
             }
         ]
     },

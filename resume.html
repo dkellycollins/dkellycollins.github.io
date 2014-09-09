@@ -48,13 +48,10 @@
                     <span>{{school.Degree}}</span>
                 </div>
                 <div>
-                    <span>Expected Graduation: {{school.GraduationDate}}</span>
+                    <span>Expected Graduation: {{school.GraduationDate | date:'MMMM yyyy'}}</span>
                 </div>
                 <div>
                     <span>GPA: {{school.GPA}}</span>
-                </div>
-                <div class="pull-right">
-                    <span>{{school.StartDate}} - {{school.EndDate}}</span>
                 </div>
             </div>
         </div>
@@ -85,7 +82,7 @@
         <div class="col-xs-10">
             <div ng-repeat="job in resumeData.Experience.Jobs">
                 <div class="pull-right">
-                    <span>{{job.StartDate || 'Current'}} - {{job.EndDate || 'Current'}}</span>
+                    <span>{{(job.StartDate | date:'MMM yy') || 'Current'}} - {{(job.EndDate | date:'MMM yy') || 'Current'}}</span>
                 </div>
                 <div>
                     <strong>{{job.Company}}</strong>
@@ -121,7 +118,7 @@
         <div class="col-xs-10">
             <div ng-repeat="org in resumeData.Organizations.Orgs">
                 <div class="pull-right">
-                    <span>{{org.StartDate || 'Current'}} - {{org.EndDate || 'Current'}}</span>
+                    <span>{{(org.StartDate | date:'MMM yy') || 'Current'}} - {{(org.EndDate | date:'MMM yy') || 'Current'}}</span>
                 </div>
                 <div>
                     <strong>{{org.Name}}</strong>
