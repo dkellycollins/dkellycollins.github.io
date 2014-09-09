@@ -22,21 +22,34 @@
         "Title": "Skills",
         "Languages": [
             "Java / C#",
-            "C / C++",
             "HTML / CSS/ Javascript",
+            "SQL",
             "Python",
-            "SQL"
+            "C / C++"
         ],
         "Frameworks": [
-            "Unity",
+            "AngularJS",
+            "ASP.NET MVC4 / MVC5",
             "Google App Engine",
-            "ASP.NET MVC4",
-            "Django"
+            "Django",
+            "Unity (Game Engine)"
         ]
     },
     "Experience": {
         "Title": "Related Experience",
         "Jobs": [
+            {
+                "Company": "Beyond The Scores",
+                "Department": null,
+                "Position": "Software Developer Intern",
+                "Details": [
+                    "Rewrote score entry app using ASP.NET MVC5, AngularJS, and Socket.io",
+                    "Implemented features and fixed bugs to assist with releases.",
+                    "Developed chromecast app to display Scoreboards."
+                ],
+                "StartDate": "2014-05-22",
+                "EndDate": "2014-08-15"
+            },
             {
                 "Company": "Surface Systems and Instruments",
                 "Department": "Electronics & Software",
@@ -72,17 +85,6 @@
                 ],
                 "StartDate": "2011-05-01",
                 "EndDate": "2011-08-01"
-            },
-            {
-                "Company": "Kansas State University",
-                "Department": "Engineering Dept.",
-                "Position": "Web Developer",
-                "Details": [
-                    "Maintained Engineering Department's websites.",
-                    "Developed tools for the faculty to use HTML, CSS, Javascript, and PHP."
-                ],
-                "StartDate": "2011-01-01",
-                "EndDate": "2012-01-01"
             }
         ]
     },
@@ -104,26 +106,27 @@
         ]
     },
     "Organizations": {
-        "Title": "Honors And Awards",
+        "Title": "Organizations",
         "Orgs": [
             {
                 "Name": "Association of Computing Machinery",
                 "Position": "Secretary",
                 "Details": [
-                    "Maintain ACM's website.",
-                    "Help put together and setup events throughout the year",
-                    "Tutor students in Computer Science topics."
+                    "Maintained ACM's website.",
+                    "Helped put together and setup events throughout the year",
+                    "Tutored students in Computer Science topics."
                 ],
-                "StartDate": "2010-08-01",
-                "EndDate": null
+                "StartDate": "2013-08-01",
+                "EndDate": "2014-08-01"
             },
             {
                 "Name": "Game Development Club",
-                "Position": "Treasurer",
+                "Position": "Event Manager, Web Manager, Team Leader",
                 "Details": [
-                    "Helped organize the club for its semester.",
-                    "Leading a team of 5 in developing a 3D game during the semester.",
-                    "In charge of finding sponsors for the club."
+                    "Helped organize the club for its first semester.",
+                    "Leading a team of peers to plan, develop, and present a game during the semester.",
+                    "Organize and promote events such as an AI programming competition.",
+                    "Developing a web site for the club to use to present games."
                 ],
                 "StartDate": "2013-04-01",
                 "EndDate": null
