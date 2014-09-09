@@ -1,54 +1,142 @@
-<!doctype html>
 <html>
-    <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Dkellycollins.github.io by dkellycollins</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
-    <script src="javascripts/google-analytics.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<head>
+    <title>Devin Kelly-Collins</title>
 
-  </head>
-	<body>
-         
-		<div id="header">
-            <nav>
-                <li class="fork"><a href="https://github.com/dkellycollins">View On GitHub</a></li>
-                <li class="downloads"><a href="index.html">Home</a></li>
-            </nav>
-        </div><!-- end header -->
+    <link rel="stylesheet" href="styles/bootstrap/css/bootstrap.min.css">
 
-        <div class="wrapper">
-            <section>
-                <div id="title">
-                    <h1>Resume</h1>
-                    <p></p>
-                    <hr>
-                    <span class="credits left">Project maintained by <a href="https://github.com/dkellycollins">dkellycollins</a></span>
-                    <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></span>
-                </div>
+    <script src="scripts/lib/angularjs/angular.min.js"></script>
+    <script src="scripts/lib/jquery/jquery-2.1.1.min.js"></script>
+    <script src="scripts/google-analytics.js"></script>
+    <script src="styles/bootstrap/js/bootstrap.min.js"></script>
 
+    <script src="scripts/resumeCtrl.js"></script>
+</head>
+<body ng-app>
+<div ng-controller="ResumeCtrl" class="container">
+    <div class="row">
+        <h1 class="text-center">{{resumeData.Info.Name}}</h1>
+        <hr/>
+        <div>
+            <div class="col-xs-4 text-left">
+                <span>{{resumeData.Info.Email}}</span>
+            </div>
+            <div class="col-xs-4 text-center">
                 <div>
-                    <embed class="rframe" id="Iframe1" src="docs/Resume.pdf" height="1000px" style="width: 100%; background-color: white"></embed>
-                    <hr>
-			        <p style="text-align: center;">
-				        <a target = "blank" href = "http://www.linkedin.com/in/devinkc">Linkedin Profile</a>
-			        </p>
-			        <hr>
+                    <span>{{resumeData.Info.Address}}</span>
                 </div>
-            </section>
+                <div>
+                    <span>{{resumeData.Info.Website}}</span>
+                </div>
+            </div>
+            <div class="col-xs-4 text-right">
+                <span>{{resumeData.Info.Phone}}</span>
+            </div>
         </div>
+    </div>
 
-        <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    <div class="row">
+        <div class="col-xs-2">
+            <strong>{{resumeData.Education.Title}}</strong>
+        </div>
+        <div class="col-xs-10">
+            <div ng-repeat="school in resumeData.Education.Schools">
+                <div>
+                    <strong>{{school.Name}}</strong>
+                    <span>, {{school.Location}}</span>
+                </div>
+                <div>
+                    <span>{{school.Degree}}</span>
+                </div>
+                <div>
+                    <span>Expected Graduation: {{school.GraduationDate}}</span>
+                </div>
+                <div>
+                    <span>GPA: {{school.GPA}}</span>
+                </div>
+                <div class="pull-right">
+                    <span>{{school.StartDate}} - {{school.EndDate}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    </body>
+    <div class="row">
+        <div class="col-xs-2">
+            <strong>{{resumeData.Skills.Title}}</strong>
+        </div>
+        <div class="col-xs-5">
+            <strong>Languages</strong>
+            <ul>
+                <li ng-repeat="skill in resumeData.Skills.Languages">{{skill}}</li>
+            </ul>
+        </div>
+        <div class="col-xs-5">
+            <strong>Frameworks</strong>
+            <ul>
+                <li ng-repeat="framework in resumeData.Skills.Frameworks">{{framework}}</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-2">
+            <strong>{{resumeData.Experience.Title}}</strong>
+        </div>
+        <div class="col-xs-10">
+            <div ng-repeat="job in resumeData.Experience.Jobs">
+                <div class="pull-right">
+                    <span>{{job.StartDate || 'Current'}} - {{job.EndDate || 'Current'}}</span>
+                </div>
+                <div>
+                    <strong>{{job.Company}}</strong>
+                    <span>{{job.Department}}</span>
+                </div>
+                <div>
+                    <span>{{job.Position}}</span>
+                </div>
+                <div>
+                    <ul>
+                        <li ng-repeat="detail in job.Details">{{detail}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-2">
+            <strong>{{resumeData.Awards.Title}}</strong>
+        </div>
+        <div class="col-xs-10">
+            <ul>
+                <li ng-repeat="award in resumeData.Awards.Awards">{{award.Name}} - {{award.Date}}</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-2">
+            <strong>{{resumeData.Organizations.Title}}</strong>
+        </div>
+        <div class="col-xs-10">
+            <div ng-repeat="org in resumeData.Organizations.Orgs">
+                <div class="pull-right">
+                    <span>{{org.StartDate || 'Current'}} - {{org.EndDate || 'Current'}}</span>
+                </div>
+                <div>
+                    <strong>{{org.Name}}</strong>
+                </div>
+                <div>
+                    <span>{{org.Position}}</span>
+                </div>
+                <div>
+                    <ul>
+                        <li ng-repeat="detail in org.Details">{{detail}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
 </html>

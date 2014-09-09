@@ -1,0 +1,132 @@
+{
+    "Info": {
+        "Name": "Devin Kelly-Collins",
+        "Email": "dkellycollins@gmail.com",
+        "Address": "1401 Collage Ave, Manhattan, KS, 66502",
+        "Website": "dkellycollins.github.io",
+        "Phone": "(785) 226-6956"
+    },
+    "Education": {
+        "Title": "Education",
+        "Schools": [
+            {
+                "Name": "Kansas State University",
+                "Location": "Manhattan, KS",
+                "Degree": "Bachelor of Science in Computer Science",
+                "Graduation": "01-12-2014"
+            }
+        ]
+    },
+    "Skills": {
+        "Title": "Skills",
+        "Languages": [
+            "Java / C#",
+            "C / C++",
+            "HTML / CSS/ Javascript",
+            "Python",
+            "SQL"
+        ],
+        "Frameworks": [
+            "Unity",
+            "Google App Engine",
+            "ASP.NET MVC4",
+            "Django"
+        ]
+    },
+    "Experience": {
+        "Title": "Related Experience",
+        "Jobs": [
+            {
+                "Company": "Surface Systems and Instruments",
+                "Department": "Electronics & Software",
+                "Position": "Software Developer",
+                "Details": [
+                    "Develop and integrate new feature for current desktop applications.",
+                    "Fix current software issues using user submitted bug reports.",
+                    "Develop Google App Engine tools for internal use.",
+                    "Transitioned version control from SVN to Git."
+                ],
+                "StartDate": "2011-11-01",
+                "EndDate": null
+            },
+            {
+                "Company": "Kansas State University",
+                "Department": "Computer Science Dept.",
+                "Position": "Web Developer",
+                "Details": [
+                    "Developed internal site for use within a classroom using ASP.NET.",
+                    "Coordinated with Biology department to determine the site's look ."
+                ],
+                "StartDate": "2013-04-01",
+                "EndDate": "2013-08-01"
+            },
+            {
+                "Company": "Cerner",
+                "Department": "Innovations Campus",
+                "Position": "Software Engineer Intern",
+                "Details": [
+                    "Worked with the RevWorks team on the Java uplift of AccessHIM.",
+                    "Helped release the live version of AccessHIM (1.0).",
+                    "Worked on one the RevWorks' top ten projects; adding a Coding Summary mPage to PowerChart."
+                ],
+                "StartDate": "2011-05-01",
+                "EndDate": "2011-08-01"
+            },
+            {
+                "Company": "Kansas State University",
+                "Department": "Engineering Dept.",
+                "Position": "Web Developer",
+                "Details": [
+                    "Maintained Engineering Department's websites.",
+                    "Developed tools for the faculty to use HTML, CSS, Javascript, and PHP."
+                ],
+                "StartDate": "2011-01-01",
+                "EndDate": "2012-01-01"
+            }
+        ]
+    },
+    "Awards": {
+        "Title": "Honors And Awards",
+        "Awards": [
+            {
+                "Name": "Eagle Scout",
+                "Date": "Fall 2009"
+            },
+            {
+                "Name": "Diamond Powercat Award",
+                "Date": "Spring 2011"
+            },
+            {
+                "Name": "Completed Kansas Scholars Program",
+                "Date": "Spring 2010"
+            }
+        ]
+    },
+    "Organizations": {
+        "Title": "Honors And Awards",
+        "Orgs": [
+            {
+                "Name": "Association of Computing Machinery",
+                "Position": "Secretary",
+                "Details": [
+                    "Maintain ACM's website.",
+                    "Help put together and setup events throughout the year",
+                    "Tutor students in Computer Science topics."
+                ],
+                "StartDate": "2010-08-01",
+                "EndDate": null
+            },
+            {
+                "Name": "Game Development Club",
+                "Position": "Treasurer",
+                "Details": [
+                    "Helped organize the club for its semester.",
+                    "Leading a team of 5 in developing a 3D game during the semester.",
+                    "In charge of finding sponsors for the club."
+                ],
+                "StartDate": "2013-04-01",
+                "EndDate": null
+            }
+        ]
+    }
+}
