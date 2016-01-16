@@ -1,0 +1,6 @@
+<md-list>
+    <md-divider ng-repeat-start="(group, states) in groups">{{group}}</md-divider>
+    <md-list-item ng-repeat-end ng-repeat="state in states" ui-sref="{{state.name}}">
+        <span>{{state.data.linkText}}</span>
+    </md-item>
+</md-list>
