@@ -1,3 +1,6 @@
 angular.module('app.views', [
-    'app.components'
+    'ngMaterial',
+    'ngMdIcons',
+    'app.components',
+    'app.filters'
 ])

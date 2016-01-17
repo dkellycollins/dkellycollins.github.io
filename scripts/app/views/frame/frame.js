@@ -1,4 +1,4 @@
 angular.module('app.views')
-    .controller('FrameCtrl', ['$scope', 'src', function($scope, src) {
-        $scope.src = src;
+    .controller('FrameCtrl', ['$scope', '$sce', 'src', function($scope, $sce, src) {
+        $scope.src = $sce.trustAsResourceUrl(src);
     }]);

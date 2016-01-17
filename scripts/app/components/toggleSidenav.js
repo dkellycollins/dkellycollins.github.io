@@ -6,7 +6,7 @@ angular.module('app.components')
                 var sidenavId = $attrs.toggleSidenav;
                 
                 $element.on('click', function() {
-                   $mdSidenav.toggle(sidenavId); 
+                   $mdSidenav(sidenavId).toggle(); 
                 });
             }
         }

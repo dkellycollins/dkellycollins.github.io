@@ -1,1 +1,4 @@
-angular.module('app', ['app.config', 'app.routes']);
+angular.module('app', [
+    'ui.router',
+    'app.routes'
+]);
