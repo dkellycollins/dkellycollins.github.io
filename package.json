@@ -1,0 +1,25 @@
+{
+  "name": "workspace",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dkellycollins/dkellycollins.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dkellycollins/dkellycollins.github.io/issues"
+  },
+  "homepage": "https://github.com/dkellycollins/dkellycollins.github.io#readme",
+  "dependencies": {
+    "gulp": "3.9.0",
+    "gulp-clean": "0.3.1",
+    "gulp-concat": "2.6.0",
+    "gulp-minify": "0.0.5"
+  }
+}
