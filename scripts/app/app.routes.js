@@ -29,10 +29,10 @@ angular.module('app.routes', ['ui.router', 'app.views'])
             })
             .state('app.games.castle-crossing', {
                 url: 'castlecrossing',
-                templateUrl: 'scripts/app/views/frame/frame.html',
-                controller: 'FrameCtrl',
+                templateUrl: 'scripts/app/views/unity/unityWebPlayer.html',
+                controller: 'UnityWebPlayerCtrl',
                 resolve: {
-                    src: function() {return 'https://dkellycollins.github.io/CastleCrossing/';}
+                    src: function() {return 'https://dkellycollins.github.io/CastleCrossing/Web.unity3d';}
                 },
                 data: {
                     title: 'Castle Crossing',
