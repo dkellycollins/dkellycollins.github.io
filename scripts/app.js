@@ -70,11 +70,8 @@ angular.module('app.routes', ['ui.router', 'app.views'])
             })
             .state('app.about.resume', {
                 url: 'resume',
-                templateUrl: 'scripts/app/views/frame/frame.html',
-                controller: 'FrameCtrl',
-                resolve: {
-                    src: function() {return 'assets/Resume.pdf';}
-                },
+                templateUrl: 'scripts/app/views/resume/resume.html',
+                controller: 'ResumeCtrl',
                 data: {
                     title: 'Resume',
                     linkText: 'Resume'
@@ -208,6 +205,20 @@ angular.module('app.views')
     .controller('FrameCtrl', ['$scope', '$sce', 'src', function($scope, $sce, src) {
         $scope.src = $sce.trustAsResourceUrl(src);
     }]);
+var ResumeCtrl = (function () {
+   function ResumeCtrl($scope, $http) {
+      this.$scope = $scope;
+      this.$http = $http;
+      $http.get("scripts/app/views/resume/resumeData.json").success(function (data) {
+         $scope.resumeData = data;
+      });
+   }
+   ResumeCtrl.$inject = ['$scope', '$http'];
+   return ResumeCtrl;
+})();
+
+angular.module('app.views')
+   .controller('ResumeCtrl', ResumeCtrl);
 angular.module('app.views')
     .controller('UnityWebPlayerCtrl', ['$scope', '$sce', 'src', function($scope, $sce, src) {
         $scope.src = $sce.trustAsResourceUrl(src);
