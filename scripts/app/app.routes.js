@@ -49,11 +49,8 @@ angular.module('app.routes', ['ui.router', 'app.views'])
             })
             .state('app.about.resume', {
                 url: 'resume',
-                templateUrl: 'scripts/app/views/frame/frame.html',
-                controller: 'FrameCtrl',
-                resolve: {
-                    src: function() {return 'assets/Resume.pdf';}
-                },
+                templateUrl: 'scripts/app/views/resume/resume.html',
+                controller: 'ResumeCtrl',
                 data: {
                     title: 'Resume',
                     linkText: 'Resume'
