@@ -209,7 +209,7 @@ var ResumeCtrl = (function () {
    function ResumeCtrl($scope, $http) {
       this.$scope = $scope;
       this.$http = $http;
-      $http.get("scripts/app/views/resume/resumeData.json").success(function (data) {
+      $http.get("assets/resumeData.json").success(function (data) {
          $scope.resumeData = data;
       });
    }
