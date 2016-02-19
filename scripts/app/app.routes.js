@@ -1,11 +1,11 @@
 angular.module('app.routes', ['ui.router', 'app.views'])
     .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise('/games/stf');
+        $urlRouterProvider.otherwise('/about/resume');
         $stateProvider
             .state('app', {
                 abstract: true,
-                templateUrl: 'scripts/app/views/main.html',
                 url: '/',
+                templateUrl: 'scripts/app/views/main.html'
             })
             .state('app.games', {
                 abstract: true,

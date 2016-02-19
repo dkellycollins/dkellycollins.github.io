@@ -21,12 +21,12 @@ angular.module('app.views', [
 ])
 angular.module('app.routes', ['ui.router', 'app.views'])
     .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise('/games/stf');
+        $urlRouterProvider.otherwise('/about/resume');
         $stateProvider
             .state('app', {
                 abstract: true,
-                templateUrl: 'scripts/app/views/main.html',
                 url: '/',
+                templateUrl: 'scripts/app/views/main.html'
             })
             .state('app.games', {
                 abstract: true,
@@ -62,7 +62,7 @@ angular.module('app.routes', ['ui.router', 'app.views'])
             })
             .state('app.about', {
                 abstract: true,
-                template: '<div ui-view style="height:100%;"></div>',
+                template: '<div ui-view></div>',
                 url: 'about/',
                 data: {
                     group: 'About'
@@ -178,7 +178,7 @@ angular.module('app.filters')
             var currentState = $state.current;
             return _.get(currentState, 'data.' + property) || defaultValue;
         }
-    }])
+    }]);
 angular.module('app.components')
     .controller('SitemapCtrl', ['$scope', '$state', function($scope, $state) {
         var states = $state.get();
