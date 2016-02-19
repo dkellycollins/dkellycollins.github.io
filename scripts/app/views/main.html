@@ -1,21 +1,25 @@
 <div layout>
-    <md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2" md-component-id="left">
-        <md-content class="md-padding">
-            <sitemap></sitemap>  
-        </md-content>
-    </md-sidenav>
-    
-    <div style="height:100%" flex layout="column" tabIndex="-1" role="main" class="md-whiteframe-z2">
-        <md-toolbar layout="row" class="md-whiteframe-z1">
-          <div class="md-toolbar-tools">
+
+
+   <div style="height:100%" flex layout="column" tabIndex="-1" role="main" class="md-whiteframe-z2">
+      <md-toolbar layout="row" class="md-whiteframe-z1">
+         <div class="md-toolbar-tools">
             <md-button class="md-icon-button" toggle-sidenav="left">
-              <ng-md-icon icon="menu" style="fill: white;"></ng-md-icon>
+               <ng-md-icon icon="menu" style="fill: white;"></ng-md-icon>
             </md-button>
             <h3 class="md-title">Dkellycollins - {{'title' | stateData:'Home'}}</h3>
-          </div>
-        </md-toolbar>
-        <md-content flex id="content">
-          <div ui-view></div>
-        </md-content>
-    </div>    
+         </div>
+      </md-toolbar>
+      <div layout="row">
+         <md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2" md-component-id="left"
+                     md-is-locked-open="$mdMedia('min-width: 1200px')">
+            <md-content class="md-padding">
+               <sitemap></sitemap>
+            </md-content>
+         </md-sidenav>
+         <md-content flex id="content">
+            <div ui-view></div>
+         </md-content>
+      </div>
+   </div>
 </div>
