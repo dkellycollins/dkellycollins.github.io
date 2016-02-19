@@ -41,7 +41,7 @@ angular.module('app.routes', ['ui.router', 'app.views'])
             })
             .state('app.about', {
                 abstract: true,
-                template: '<div ui-view style="height:100%;"></div>',
+                template: '<div ui-view></div>',
                 url: 'about/',
                 data: {
                     group: 'About'

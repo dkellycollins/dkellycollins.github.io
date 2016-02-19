@@ -1,0 +1,106 @@
+/** Positioning **/
+
+.pull-right {
+    float: right;
+}
+
+.pull-left {
+    float: left;
+}
+
+.top {
+    position: absolute;
+
+    top:0;
+    left:0;
+    right:0;
+}
+
+.top-right {
+    position: absolute;
+
+    top:0;
+    right:0;
+}
+
+.top-left {
+    position: absolute;
+
+    top:0;
+    left:0;
+}
+
+.bottom {
+    position: absolute;
+
+    bottom:0;
+    left:0;
+    right:0;
+}
+
+.bottom-right {
+    position: absolute;
+
+    bottom:0;
+    right:0;
+}
+
+.bottom-left {
+    position: absolute;
+
+    bottom:0;
+    left:0;
+}
+
+/** Text **/
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+/** Resume **/
+
+.resume {
+    font-family: 'Trocchi', serif;
+    width: 1170px;
+
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 768px) {
+    .resume {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .resume {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .resume {
+        width: 1170px;
+    }
+}
+
+.resume hr {
+    border-top: 2px solid #000000;
+    margin: 10px 0;
+}
+
+.resume .layout-row {
+    margin-bottom: 10px;
+}

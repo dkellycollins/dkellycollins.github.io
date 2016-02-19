@@ -1,30 +1,28 @@
-<div class="container">
-   <div class="row">
-      <h1 class="text-center">{{resumeData.Info.Name}}</h1>
-      <hr/>
-      <div>
-         <div class="col-xs-3 text-left">
-            <span>{{resumeData.Info.Email}}</span>
+<div class="resume">
+   <h1 class="text-center">{{resumeData.Info.Name}}</h1>
+   <hr/>
+   <div layout="row">
+      <div flex>
+         <span>{{resumeData.Info.Email}}</span>
+      </div>
+      <div flex="50" class="text-center">
+         <div>
+            <span>{{resumeData.Info.Address}}</span>
          </div>
-         <div class="col-xs-6 text-center">
-            <div>
-               <span>{{resumeData.Info.Address}}</span>
-            </div>
-            <div>
-               <span>{{resumeData.Info.Website}}</span>
-            </div>
+         <div>
+            <span>{{resumeData.Info.Website}}</span>
          </div>
-         <div class="col-xs-3 text-right">
-            <span>{{resumeData.Info.Phone}}</span>
-         </div>
+      </div>
+      <div flex class="text-right">
+         <span>{{resumeData.Info.Phone}}</span>
       </div>
    </div>
 
-   <div class="row">
-      <div class="col-xs-2">
+   <div layout="row">
+      <div flex="20">
          <strong>{{resumeData.Education.Title}}</strong>
       </div>
-      <div class="col-xs-10">
+      <div flex>
          <div ng-repeat="school in resumeData.Education.Schools">
             <div>
                <strong>{{school.Name}}</strong>
@@ -43,17 +41,17 @@
       </div>
    </div>
 
-   <div class="row">
-      <div class="col-xs-2">
+   <div layout="row">
+      <div flex="20">
          <strong>{{resumeData.Skills.Title}}</strong>
       </div>
-      <div class="col-xs-5">
+      <div flex>
          <strong>Languages</strong>
          <ul>
             <li ng-repeat="skill in resumeData.Skills.Languages">{{skill}}</li>
          </ul>
       </div>
-      <div class="col-xs-5">
+      <div flex>
          <strong>Frameworks</strong>
          <ul>
             <li ng-repeat="framework in resumeData.Skills.Frameworks">{{framework}}</li>
@@ -61,11 +59,11 @@
       </div>
    </div>
 
-   <div class="row">
-      <div class="col-xs-2">
+   <div layout="row">
+      <div flex="20">
          <strong>{{resumeData.Experience.Title}}</strong>
       </div>
-      <div class="col-xs-10">
+      <div flex>
          <div ng-repeat="job in resumeData.Experience.Jobs">
             <div class="pull-right">
                <span>{{(job.StartDate | date:'MMM yy') || 'Current'}} - {{(job.EndDate | date:'MMM yy') || 'Current'}}</span>
@@ -86,22 +84,22 @@
       </div>
    </div>
 
-   <div class="row">
-      <div class="col-xs-2">
+   <div layout="row">
+      <div flex="20">
          <strong>{{resumeData.Awards.Title}}</strong>
       </div>
-      <div class="col-xs-10">
+      <div flex>
          <ul>
             <li ng-repeat="award in resumeData.Awards.Awards">{{award.Name}} - {{award.Date}}</li>
          </ul>
       </div>
    </div>
 
-   <div class="row">
-      <div class="col-xs-2">
+   <div layout="row">
+      <div flex="20">
          <strong>{{resumeData.Organizations.Title}}</strong>
       </div>
-      <div class="col-xs-10">
+      <div flex>
          <div ng-repeat="org in resumeData.Organizations.Orgs">
             <div class="pull-right">
                <span>{{(org.StartDate | date:'MMM yy') || 'Current'}} - {{(org.EndDate | date:'MMM yy') || 'Current'}}</span>
