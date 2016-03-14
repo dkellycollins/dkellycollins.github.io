@@ -4,7 +4,7 @@ var minify = require("gulp-minify");
 var concat = require("gulp-concat");
 
 var files = [
-    'scripts/lib/google-analytics/google-analytics.js',
+    'scripts/google-analytics/google-analytics.js',
     'scripts/app/app.config.js',
     'scripts/app/app.filters.js',
     'scripts/app/app.components.js',
