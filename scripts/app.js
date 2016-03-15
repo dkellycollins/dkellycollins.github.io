@@ -79,6 +79,7 @@ angular.module('app.routes', ['ui.router', 'app.views'])
             });
     }]);
 angular.module('app', [
+    'ngUnity',
     'ui.router',
     'app.routes'
 ]);
@@ -95,90 +96,13 @@ angular.module('app.components')
             }
         }
     }]);
-var unityObjectUrl = "http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js";
-if (document.location.protocol == 'https:')
-   unityObjectUrl = unityObjectUrl.replace("http://", "https://ssl-");
-document.write('<script type="text\/javascript" src="' + unityObjectUrl + '"><\/script>');
-
-angular.module('app.components')
-    .directive('unityWebPlayer', [function () {
-       var config = {
-          width: 960,
-          height: 600,
-          params: {
-             enableDebugging: '1',
-             disableContextMenu: true
-          }
-       };
-
-       function init(src, $element) {
-          var $missingScreen = $element.find('.missing');
-          var $brokenScreen = $element.find('.broken');
-          $missingScreen.hide();
-          $brokenScreen.hide();
-
-          var u = new UnityObject2(config);
-          u.observeProgress(function (progress) {
-             switch (progress.pluginStatus) {
-                case "broken":
-                {
-                   $brokenScreen.find("a").click(function (e) {
-                      e.stopPropagation();
-                      e.preventDefault();
-                      u.installPlugin();
-
-                      return false;
-                   });
-                   $brokenScreen.show();
-                }
-                   break;
-                case "missing":
-                {
-                   $missingScreen.find("a").click(function (e) {
-                      e.stopPropagation();
-                      e.preventDefault();
-                      u.installPlugin();
-                      return false;
-                   });
-                   $missingScreen.show();
-                }
-                   break;
-                case "installed":
-                {
-                   $missingScreen.remove();
-                }
-                   break;
-                case "first":
-                {
-
-                }
-                   break;
-             }
-          });
-
-          u.initPlugin($element, src);
-       }
-
-       return {
-          restrict: 'EA',
-          link: function ($scope, $element, $attr) {
-             $scope.$watch($attr.unityWebPlayer, function(src) {
-                if(!src) {
-                   return;
-                }
-
-                init(src, $element);
-             });
-          }
-       }
-    }]);
 angular.module('app.filters')
     .filter('stateData', ['$state', function($state) {
         return function(property, defaultValue) {
             var currentState = $state.current;
             return _.get(currentState, 'data.' + property) || defaultValue;
         }
-    }]);
+    }])
 angular.module('app.components')
     .controller('SitemapCtrl', ['$scope', '$state', function($scope, $state) {
         var states = $state.get();
@@ -205,6 +129,10 @@ angular.module('app.views')
     .controller('FrameCtrl', ['$scope', '$sce', 'src', function($scope, $sce, src) {
         $scope.src = $sce.trustAsResourceUrl(src);
     }]);
+angular.module('app.views')
+    .controller('UnityWebPlayerCtrl', ['$scope', '$sce', 'src', function($scope, $sce, src) {
+        $scope.src = $sce.trustAsResourceUrl(src);
+    }]);
 var ResumeCtrl = (function () {
    function ResumeCtrl($scope, $http) {
       this.$scope = $scope;
@@ -219,7 +147,3 @@ var ResumeCtrl = (function () {
 
 angular.module('app.views')
    .controller('ResumeCtrl', ResumeCtrl);
-angular.module('app.views')
-    .controller('UnityWebPlayerCtrl', ['$scope', '$sce', 'src', function($scope, $sce, src) {
-        $scope.src = $sce.trustAsResourceUrl(src);
-    }]);
