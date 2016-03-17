@@ -5,7 +5,8 @@ angular.module('app.routes', ['ui.router', 'app.views'])
             .state('app', {
                 abstract: true,
                 url: '/',
-                templateUrl: 'scripts/app/views/main.html'
+                templateUrl: 'scripts/app/views/main.html',
+                controller: 'MainCtrl'
             })
             .state('app.games', {
                 abstract: true,

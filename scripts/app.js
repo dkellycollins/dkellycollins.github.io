@@ -26,7 +26,8 @@ angular.module('app.routes', ['ui.router', 'app.views'])
             .state('app', {
                 abstract: true,
                 url: '/',
-                templateUrl: 'scripts/app/views/main.html'
+                templateUrl: 'scripts/app/views/main.html',
+                controller: 'MainCtrl'
             })
             .state('app.games', {
                 abstract: true,
@@ -96,6 +97,17 @@ angular.module('app.components')
             }
         }
     }]);
+angular.module('app.views')
+    .controller('MainCtrl', ['$scope', '$state', function($scope, $state) {
+       function getTitle() {
+          var currentState = $state.current;
+          return _.get(currentState, 'data.title') || 'Home';
+       }
+
+       $scope.$watch(getTitle, function(title) {
+          $scope.title = title;
+       })
+    }]);
 angular.module('app.filters')
     .filter('stateData', ['$state', function($state) {
         return function(property, defaultValue) {
@@ -129,10 +141,6 @@ angular.module('app.views')
     .controller('FrameCtrl', ['$scope', '$sce', 'src', function($scope, $sce, src) {
         $scope.src = $sce.trustAsResourceUrl(src);
     }]);
-angular.module('app.views')
-    .controller('UnityWebPlayerCtrl', ['$scope', '$sce', 'src', function($scope, $sce, src) {
-        $scope.src = $sce.trustAsResourceUrl(src);
-    }]);
 var ResumeCtrl = (function () {
    function ResumeCtrl($scope, $http) {
       this.$scope = $scope;
@@ -147,3 +155,7 @@ var ResumeCtrl = (function () {
 
 angular.module('app.views')
    .controller('ResumeCtrl', ResumeCtrl);
+angular.module('app.views')
+    .controller('UnityWebPlayerCtrl', ['$scope', '$sce', 'src', function($scope, $sce, src) {
+        $scope.src = $sce.trustAsResourceUrl(src);
+    }]);
