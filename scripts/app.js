@@ -86,7 +86,8 @@ angular.module('app', [
     ])
     .run(['$rootScope', function ($rootScope) {
        $rootScope.$on('$stateChangeSuccess', function($event, toState, toParams, fromState, fromParams) {
-          ga('send', 'pageview', toState.name);
+          ga('set', 'page', toState.name);
+          ga('send', 'pageview');
        })
     }]);
 angular.module('app.components')
