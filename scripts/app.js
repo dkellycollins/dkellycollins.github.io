@@ -80,10 +80,15 @@ angular.module('app.routes', ['ui.router', 'app.views'])
             });
     }]);
 angular.module('app', [
-    'ngUnity',
-    'ui.router',
-    'app.routes'
-]);
+       'ngUnity',
+       'ui.router',
+       'app.routes'
+    ])
+    .run(['$rootScope', function ($rootScope) {
+       $rootScope.$on('$stateChangeSuccess', function($event, toState, toParams, fromState, fromParams) {
+          ga('send', 'pageview', toState.name);
+       })
+    }]);
 angular.module('app.components')
     .directive('toggleSidenav', ['$mdSidenav', function($mdSidenav) {
         return {
