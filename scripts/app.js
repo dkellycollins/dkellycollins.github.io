@@ -97,17 +97,6 @@ angular.module('app.components')
             }
         }
     }]);
-angular.module('app.views')
-    .controller('MainCtrl', ['$scope', '$state', function($scope, $state) {
-       function getTitle() {
-          var currentState = $state.current;
-          return _.get(currentState, 'data.title') || 'Home';
-       }
-
-       $scope.$watch(getTitle, function(title) {
-          $scope.title = title;
-       })
-    }]);
 angular.module('app.filters')
     .filter('stateData', ['$state', function($state) {
         return function(property, defaultValue) {
@@ -115,6 +104,21 @@ angular.module('app.filters')
             return _.get(currentState, 'data.' + property) || defaultValue;
         }
     }])
+angular.module('app.views')
+    .controller('MainCtrl', ['$scope', '$state', '$mdSidenav', function ($scope, $state, $mdSidenav) {
+       function getTitle() {
+          var currentState = $state.current;
+          return _.get(currentState, 'data.title') || 'Home';
+       }
+
+       $scope.$watch(getTitle, function (title) {
+          $scope.title = title;
+       });
+
+       $scope.$on('$stateChangeSuccess', function() {
+          $mdSidenav('left').close();
+       });
+    }]);
 angular.module('app.components')
     .controller('SitemapCtrl', ['$scope', '$state', function($scope, $state) {
         var states = $state.get();
@@ -141,6 +145,10 @@ angular.module('app.views')
     .controller('FrameCtrl', ['$scope', '$sce', 'src', function($scope, $sce, src) {
         $scope.src = $sce.trustAsResourceUrl(src);
     }]);
+angular.module('app.views')
+    .controller('UnityWebPlayerCtrl', ['$scope', '$sce', 'src', function($scope, $sce, src) {
+        $scope.src = $sce.trustAsResourceUrl(src);
+    }]);
 var ResumeCtrl = (function () {
    function ResumeCtrl($scope, $http) {
       this.$scope = $scope;
@@ -155,7 +163,3 @@ var ResumeCtrl = (function () {
 
 angular.module('app.views')
    .controller('ResumeCtrl', ResumeCtrl);
-angular.module('app.views')
-    .controller('UnityWebPlayerCtrl', ['$scope', '$sce', 'src', function($scope, $sce, src) {
-        $scope.src = $sce.trustAsResourceUrl(src);
-    }]);
