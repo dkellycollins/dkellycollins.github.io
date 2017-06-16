@@ -2,7 +2,6 @@
   "Info": {
     "Name": "Devin Kelly-Collins",
     "Email": "dkellycollins@gmail.com",
-    "Address": "1524 S Osage ave, Bartlesville, OK, 74003",
     "Website": "dkellycollins.github.io",
     "Phone": "(785) 226-6956"
   },
@@ -21,35 +20,45 @@
   "Skills": {
     "Title": "Skills",
     "Languages": [
-      "Java / C#",
-      "HTML / CSS/ Javascript",
-      "SQL",
-      "Python",
-      "C / C++"
+      "Typescript / Javascript",
+      "C# / Java",
+      "Ruby",
+      "HTML / CSS",
+      "SQL"
     ],
     "Frameworks": [
       "AngularJS",
-      "ASP.NET MVC4 / MVC5",
-      "Google App Engine",
-      "Django",
-      "Unity (Game Engine)",
-      "WebGL"
+      "Express",
+      "ASP.NET MVC5",
+      "Ruby on Rails",
+      "Unity (Game Engine)"
     ]
   },
   "Experience": {
     "Title": "Related Experience",
     "Jobs": [
       {
+        "Company": "SportsEngine",
+        "Department": null,
+        "Position": "Software Engineer",
+        "Details": [
+          "Developed and maintain the member management platform using Ruby on Rails and Angular",
+          "Integrated separate systems to extend the platform"
+        ],
+        "StartDate": "2016-05-16",
+        "EndDate": null
+      },
+      {
         "Company": "Beyond The Scores",
         "Department": null,
-        "Position": "Software Developer Intern",
+        "Position": "Software Engineer",
         "Details": [
           "Rewrote score entry app using ASP.NET MVC5, AngularJS, and Socket.io",
           "Implemented features and fixed bugs to assist with releases.",
           "Developed chromecast app to display Scoreboards."
         ],
         "StartDate": "2014-05-22",
-        "EndDate": "2014-08-15"
+        "EndDate": "2016-05-16"
       },
       {
         "Company": "Surface Systems and Instruments",
@@ -62,7 +71,7 @@
           "Transitioned version control from SVN to Git."
         ],
         "StartDate": "2011-11-01",
-        "EndDate": null
+        "EndDate": "2014-12-15"
       },
       {
         "Company": "Kansas State University",
@@ -74,18 +83,6 @@
         ],
         "StartDate": "2013-04-01",
         "EndDate": "2013-08-01"
-      },
-      {
-        "Company": "Cerner",
-        "Department": "Innovations Campus",
-        "Position": "Software Engineer Intern",
-        "Details": [
-          "Worked with the RevWorks team on the Java uplift of AccessHIM.",
-          "Helped release the live version of AccessHIM (1.0).",
-          "Worked on one the RevWorks' top ten projects; adding a Coding Summary mPage to PowerChart."
-        ],
-        "StartDate": "2011-05-01",
-        "EndDate": "2011-08-01"
       }
     ]
   },
