@@ -42,8 +42,9 @@
         "Department": null,
         "Position": "Software Engineer",
         "Details": [
-          "Developed and maintain the member management platform using Ruby on Rails and Angular",
-          "Integrated separate systems to extend the platform"
+          "Developed and maintain the member management platform using Ruby on Rails and Angular.",
+          "Integrated separate systems to extend the platform.",
+          "Built configuration driven UI to allow users to import external data."
         ],
         "StartDate": "2016-05-16",
         "EndDate": null
@@ -54,8 +55,8 @@
         "Position": "Software Engineer",
         "Details": [
           "Rewrote score entry app using ASP.NET MVC5, AngularJS, and Socket.io",
-          "Implemented features and fixed bugs to assist with releases.",
-          "Developed chromecast app to display Scoreboards."
+          "Developed chromecast app to display live Scoreboards.",
+          "Implemented registration system that allowed club owners to register for events online."
         ],
         "StartDate": "2014-05-22",
         "EndDate": "2016-05-16"
@@ -63,7 +64,7 @@
       {
         "Company": "Surface Systems and Instruments",
         "Department": "Electronics & Software",
-        "Position": "Software Developer",
+        "Position": "Software Engineer",
         "Details": [
           "Develop and integrate new feature for current desktop applications.",
           "Fix current software issues using user submitted bug reports.",

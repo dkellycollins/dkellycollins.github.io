@@ -17,6 +17,24 @@
 
    <div layout="row">
       <div flex="20">
+         <strong>{{resumeData.Skills.Title}}</strong>
+      </div>
+      <div flex>
+         <strong>Languages</strong>
+         <ul>
+            <li ng-repeat="skill in resumeData.Skills.Languages">{{skill}}</li>
+         </ul>
+      </div>
+      <div flex>
+         <strong>Frameworks</strong>
+         <ul>
+            <li ng-repeat="framework in resumeData.Skills.Frameworks">{{framework}}</li>
+         </ul>
+      </div>
+   </div>
+
+   <div layout="row">
+      <div flex="20">
          <strong>{{resumeData.Education.Title}}</strong>
       </div>
       <div flex>
@@ -35,24 +53,6 @@
                <span>GPA: {{school.GPA}}</span>
             </div>
          </div>
-      </div>
-   </div>
-
-   <div layout="row">
-      <div flex="20">
-         <strong>{{resumeData.Skills.Title}}</strong>
-      </div>
-      <div flex>
-         <strong>Languages</strong>
-         <ul>
-            <li ng-repeat="skill in resumeData.Skills.Languages">{{skill}}</li>
-         </ul>
-      </div>
-      <div flex>
-         <strong>Frameworks</strong>
-         <ul>
-            <li ng-repeat="framework in resumeData.Skills.Frameworks">{{framework}}</li>
-         </ul>
       </div>
    </div>
 
