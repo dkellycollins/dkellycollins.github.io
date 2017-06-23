@@ -5,7 +5,10 @@ angular.module('app.routes', ['ui.router', 'app.views'])
         .state('admin', {
           abstract: true,
           url: '/admin',
-          template: '<div ui-view></div>'
+          template: '<div ui-view></div>',
+          data: {
+            siteMapHidden: true
+          }
         })
         .state('admin.resume', {
           url: '/resume',

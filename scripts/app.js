@@ -26,7 +26,10 @@ angular.module('app.routes', ['ui.router', 'app.views'])
         .state('admin', {
           abstract: true,
           url: '/admin',
-          template: '<div ui-view></div>'
+          template: '<div ui-view></div>',
+          data: {
+            siteMapHidden: true
+          }
         })
         .state('admin.resume', {
           url: '/resume',
@@ -100,13 +103,6 @@ angular.module('app', [
           ga('send', 'pageview');
        })
     }]);
-angular.module('app.filters')
-    .filter('stateData', ['$state', function($state) {
-        return function(property, defaultValue) {
-            var currentState = $state.current;
-            return _.get(currentState, 'data.' + property) || defaultValue;
-        }
-    }])
 angular.module('app.components')
     .directive('toggleSidenav', ['$mdSidenav', function($mdSidenav) {
         return {
@@ -120,6 +116,13 @@ angular.module('app.components')
             }
         }
     }]);
+angular.module('app.filters')
+    .filter('stateData', ['$state', function($state) {
+        return function(property, defaultValue) {
+            var currentState = $state.current;
+            return _.get(currentState, 'data.' + property) || defaultValue;
+        }
+    }])
 angular.module('app.views')
     .controller('MainCtrl', ['$scope', '$state', '$mdSidenav', '$mdMedia', function ($scope, $state, $mdSidenav, $mdMedia) {
        function getTitle() {
