@@ -4,11 +4,11 @@ angular.module('app.routes', ['ui.router', 'app.views'])
     $stateProvider
         .state('admin', {
           abstract: true,
-          url: 'admin/',
+          url: '/admin',
           template: '<div ui-view></div>'
         })
         .state('admin.resume', {
-          url: 'resume',
+          url: '/resume',
           controller: 'ResumeCtrl',
           templateUrl: 'scripts/app/views/resume.html'
         })
