@@ -31,7 +31,7 @@ angular.module('app.routes', ['ui.router', 'app.views'])
         .state('admin.resume', {
           url: '/resume',
           controller: 'ResumeCtrl',
-          templateUrl: 'scripts/app/views/resume.html'
+          templateUrl: 'scripts/app/views/resume/resume.html'
         })
         .state('app', {
           abstract: true,
@@ -100,6 +100,13 @@ angular.module('app', [
           ga('send', 'pageview');
        })
     }]);
+angular.module('app.filters')
+    .filter('stateData', ['$state', function($state) {
+        return function(property, defaultValue) {
+            var currentState = $state.current;
+            return _.get(currentState, 'data.' + property) || defaultValue;
+        }
+    }])
 angular.module('app.components')
     .directive('toggleSidenav', ['$mdSidenav', function($mdSidenav) {
         return {
@@ -113,13 +120,6 @@ angular.module('app.components')
             }
         }
     }]);
-angular.module('app.filters')
-    .filter('stateData', ['$state', function($state) {
-        return function(property, defaultValue) {
-            var currentState = $state.current;
-            return _.get(currentState, 'data.' + property) || defaultValue;
-        }
-    }])
 angular.module('app.views')
     .controller('MainCtrl', ['$scope', '$state', '$mdSidenav', '$mdMedia', function ($scope, $state, $mdSidenav, $mdMedia) {
        function getTitle() {

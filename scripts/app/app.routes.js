@@ -10,7 +10,7 @@ angular.module('app.routes', ['ui.router', 'app.views'])
         .state('admin.resume', {
           url: '/resume',
           controller: 'ResumeCtrl',
-          templateUrl: 'scripts/app/views/resume.html'
+          templateUrl: 'scripts/app/views/resume/resume.html'
         })
         .state('app', {
           abstract: true,
