@@ -42,9 +42,9 @@
         "Department": null,
         "Position": "Software Engineer",
         "Details": [
-          "Developed and maintain the member management platform using Ruby on Rails and Angular.",
-          "Integrated separate systems to extend the platform.",
-          "Built configuration driven UI to allow users to import external data."
+          "Developed and maintained the member management platform using Ruby on Rails and Angular.",
+          "Integrated data from separate systems to extend the platform.",
+          "Built configuration driven UI to allow users to import external data from multiple systems."
         ],
         "StartDate": "2016-05-16",
         "EndDate": null
@@ -54,9 +54,10 @@
         "Department": null,
         "Position": "Software Engineer",
         "Details": [
-          "Rewrote score entry app using ASP.NET MVC5, AngularJS, and Socket.io",
-          "Developed chromecast app to display live Scoreboards.",
-          "Implemented registration system that allowed club owners to register for events online."
+          "Developed and maintained mobile app for iOS and Android using Ionic.",
+          "Implemented registration system to allow club owners to register for events online.",
+          "Rewrote score entry app to be mobile friendly using ASP.NET and AngularJS.",
+          "Developed chromecast app to display live Scoreboards."
         ],
         "StartDate": "2014-05-22",
         "EndDate": "2016-05-16"
@@ -66,9 +67,8 @@
         "Department": "Electronics & Software",
         "Position": "Software Engineer",
         "Details": [
-          "Develop and integrate new feature for current desktop applications.",
-          "Fix current software issues using user submitted bug reports.",
-          "Develop Google App Engine tools for internal use.",
+          "Integrated third-party camera software into desktop applications.",
+          "Developed Google App Engine tools to manage bug reports and releases.",
           "Transitioned version control from SVN to Git."
         ],
         "StartDate": "2011-11-01",
@@ -80,7 +80,7 @@
         "Position": "Web Developer",
         "Details": [
           "Developed internal site for use within a classroom using ASP.NET.",
-          "Coordinated with Biology department to determine the site's look ."
+          "Coordinated with Biology department to determine the site's look."
         ],
         "StartDate": "2013-04-01",
         "EndDate": "2013-08-01"
@@ -123,12 +123,12 @@
         "Position": "Event Manager, Web Manager, Team Leader",
         "Details": [
           "Helped organize the club for its first semester.",
-          "Leading a team of peers to plan, develop, and present a game during the semester.",
+          "Lead a team of peers to plan, develop, and present a game during the semester.",
           "Organize and promote events such as an AI programming competition.",
-          "Developing a web site for the club to use to present games."
+          "Developed a web site for the club to use to present games."
         ],
         "StartDate": "2013-04-01",
-        "EndDate": null
+        "EndDate": "2014-12-01"
       }
     ]
   }
