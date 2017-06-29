@@ -55,7 +55,7 @@ angular.module('app.routes', ['ui.router', 'app.views'])
           templateUrl: 'scripts/app/views/frame/frame.html',
           controller: 'FrameCtrl',
           resolve: {
-            src: function () { return 'https://dkellycollins.github.io/STF/'; }
+            src: function () { return 'http://dkellycollins.github.io/STF/'; }
           },
           data: {
             title: 'Secure the Future',
