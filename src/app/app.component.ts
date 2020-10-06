@@ -3,29 +3,41 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-    <!--The content below is only a placeholder and can be replaced.-->
-    <div style="text-align:center" class="content">
-      <h1>
-        Welcome to {{title}}!
-      </h1>
-      <span style="display: block">{{ title }} app is running!</span>
-      <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-    </div>
-    <h2>Here are some links to help you start: </h2>
-    <ul>
-      <li>
-        <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-      </li>
-      <li>
-        <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-      </li>
-      <li>
-        <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-      </li>
-    </ul>
-    <router-outlet></router-outlet>
+    <mat-toolbar color="primary">Portfolio</mat-toolbar>
+    <mat-drawer-container class="app-container">
+      <mat-drawer mode="side" opened>
+        <mat-nav-list class="nav">
+          <h3 matSubHeader>About</h3>
+          <a mat-list-item>Resume</a>
+
+          <h3 matSubHeader>Apps</h3>
+          <a mat-list-item>Amiibos</a>
+          <a mat-list-item>Amiibos API</a>
+          <a mat-list-item>Docker Explorer</a>
+
+          <h3 matSubHeader>Games</h3>
+          <a mat-list-item>STF</a>
+          <a mat-list-item>The End</a>
+          <a mat-list-item>Zenbox</a>
+
+          <h3 matSubHeader>Slides</h3>
+          <a mat-list-item>Javascript / Not Javascript</a>
+          <a mat-list-item>Managing state with React</a>
+          <a mat-list-item>Getting started with Firebase</a>
+          <a mat-list-item>angular-cucumber-e2e</a>
+          <a mat-list-item>Developing with Docker</a>
+        </mat-nav-list>
+      </mat-drawer>
+      <mat-drawer-content>
+        <router-outlet></router-outlet>
+      </mat-drawer-content>
+    </mat-drawer-container>
   `,
-  styles: []
+  styles: [
+    `:host { display: flex; flex-direction: column; height: 100% }`,
+    `.app-container { flex: 1 1 auto; }`,
+    `.nav { padding-left: 16px; }`
+  ]
 })
 export class AppComponent {
   title = 'dkellycollins';
