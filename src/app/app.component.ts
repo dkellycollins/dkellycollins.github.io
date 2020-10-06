@@ -16,7 +16,7 @@ import { Component } from '@angular/core';
           <a mat-list-item>Docker Explorer</a>
 
           <h3 matSubHeader>Games</h3>
-          <a mat-list-item>STF</a>
+          <a mat-list-item [routerLink]="['stf']" routerLinkActive="nav-link-active">STF</a>
           <a mat-list-item>The End</a>
           <a mat-list-item>Zenbox</a>
 

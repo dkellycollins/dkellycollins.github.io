@@ -2,3 +2,8 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.nav-link-active {
+  color: blue !important;
+  font-weight: 500;
+}
