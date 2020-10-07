@@ -34,7 +34,9 @@ const routes: Routes = [
     path: 'slides/developing-with-docker',
     component: FramePage,
     data: { src: 'http://github.dkellycollins.info/talk-developing-with-docker/#/' }
-  }
+  },
+
+  { path: '**', redirectTo: 'about/resume' }
 ];
 
 @NgModule({

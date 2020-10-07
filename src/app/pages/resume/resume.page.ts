@@ -3,9 +3,9 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-resume',
   template: `
-    <p>
-      resume works!
-    </p>
+    <div style="margin: 16px; text-align: center;">
+      Coming soon!
+    </div>
   `,
   styles: [
   ]
