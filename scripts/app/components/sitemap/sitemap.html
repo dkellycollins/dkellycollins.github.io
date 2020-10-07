@@ -1,8 +1,0 @@
-<md-list>
-    <div class="md-subhead" ng-repeat-start="(group, states) in groups">{{group}}</div>
-    <md-list-item ng-repeat-end ng-repeat="state in states">
-        <md-button ui-sref="{{state.name}}" ui-sref-active="md-primary">
-            <span>{{state.data.linkText}}</span>    
-        </md-button>
-    </md-list-item>
-</md-list>
