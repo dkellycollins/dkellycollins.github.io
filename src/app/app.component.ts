@@ -1,4 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Event, NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
+
+declare function gtag(...args: Array<any>): void;
 
 @Component({
   selector: 'app-root',
@@ -39,6 +44,19 @@ import { Component } from '@angular/core';
     `.nav { padding-left: 16px; }`
   ]
 })
-export class AppComponent {
-  title = 'dkellycollins';
+export class AppComponent implements OnInit {
+
+  constructor(
+    private readonly router: Router
+  ) { }
+
+  public ngOnInit(): void {
+    if (!!environment.analytics.code) {
+      this.router.events
+        .pipe(filter((event: Event): event is NavigationEnd => event instanceof NavigationEnd))
+        .subscribe(event => {
+          gtag('config', environment.analytics.code, { 'page_path': event.urlAfterRedirects })
+        });
+    }
+  }
 }
