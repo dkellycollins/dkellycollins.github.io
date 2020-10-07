@@ -1,0 +1,15 @@
+version: '3'
+services:
+  devcontainer:
+    container_name: dkellycollins-github
+    image: mcr.microsoft.com/vscode/devcontainers/javascript-node:10
+    command: /bin/sh -c "while sleep 1000; do :; done"
+    ports:
+      - 4200:4200
+    volumes:
+      - ..:/workspace:cached
+      - node_modules:/workspace/node_modules
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+volumes:
+  node_modules:
