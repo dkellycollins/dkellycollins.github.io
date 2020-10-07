@@ -17,6 +17,7 @@ import { Component } from '@angular/core';
 
           <h3 matSubHeader>Games</h3>
           <a mat-list-item [routerLink]="['games/stf']" routerLinkActive="nav-link-active">STF</a>
+          <!--<a mat-list-item>Castle Crossing</a>-->
           <!--<a mat-list-item>The End</a>-->
           <!--<a mat-list-item>Zenbox</a>-->
 

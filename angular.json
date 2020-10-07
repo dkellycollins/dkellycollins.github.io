@@ -106,6 +106,12 @@
           "options": {
             "browserTarget": "dkellycollins:build"
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "cname": "github.dkellycollins.io"
+          }
         }
       }
     }
