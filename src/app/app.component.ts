@@ -8,24 +8,23 @@ import { Component } from '@angular/core';
       <mat-drawer mode="side" opened>
         <mat-nav-list class="nav">
           <h3 matSubHeader>About</h3>
-          <a mat-list-item>Resume</a>
+          <a mat-list-item [routerLink]="['about/resume']" routerLinkActive="nav-link-active">Resume</a>
 
           <h3 matSubHeader>Apps</h3>
-          <a mat-list-item>Amiibos</a>
+          <a mat-list-item>Amiibos Collector</a>
           <a mat-list-item>Amiibos API</a>
-          <a mat-list-item>Docker Explorer</a>
+          <!--<a mat-list-item>Docker Explorer</a>-->
 
           <h3 matSubHeader>Games</h3>
-          <a mat-list-item [routerLink]="['stf']" routerLinkActive="nav-link-active">STF</a>
-          <a mat-list-item>The End</a>
-          <a mat-list-item>Zenbox</a>
+          <a mat-list-item [routerLink]="['games/stf']" routerLinkActive="nav-link-active">STF</a>
+          <!--<a mat-list-item>The End</a>-->
+          <!--<a mat-list-item>Zenbox</a>-->
 
           <h3 matSubHeader>Slides</h3>
-          <a mat-list-item>Javascript / Not Javascript</a>
-          <a mat-list-item>Managing state with React</a>
-          <a mat-list-item>Getting started with Firebase</a>
-          <a mat-list-item>angular-cucumber-e2e</a>
-          <a mat-list-item>Developing with Docker</a>
+          <a mat-list-item [routerLink]="['slides/javascript-not-javascript']" routerLinkActive="nav-link-active">Javascript / Not Javascript</a>
+          <a mat-list-item [routerLink]="['slides/managing-state-in-react']" routerLinkActive="nav-link-active">Managing state with React</a>
+          <a mat-list-item [routerLink]="['slides/developing-with-docker']" routerLinkActive="nav-link-active">Developing with Docker</a>
+          <a mat-list-item [routerLink]="['slides/angular-cucumber-e2e']" routerLinkActive="nav-link-active">E2E Testing with Angular and Cucumber</a>
         </mat-nav-list>
       </mat-drawer>
       <mat-drawer-content>
