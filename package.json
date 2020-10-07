@@ -7,7 +7,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "deploy": "ng deploy --name=\"dkellycollins\" --email=\"dkellycollins@gmail.com\" --no-silent"
+    "deploy": "ng deploy"
   },
   "private": true,
   "dependencies": {
