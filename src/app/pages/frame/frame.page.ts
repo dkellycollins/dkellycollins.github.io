@@ -26,5 +26,4 @@ export class FramePage {
       map(src => this.domSanitizer.bypassSecurityTrustResourceUrl(src))
     );
   }
-
 }
