@@ -15,10 +15,11 @@ declare function gtag(...args: Array<any>): void;
           <h3 matSubHeader>About</h3>
           <a mat-list-item [routerLink]="['about/resume']" routerLinkActive="nav-link-active">Resume</a>
 
-          <h3 matSubHeader>Apps</h3>
+          <h3 matSubHeader>Projects</h3>
           <a mat-list-item>Amiibos Collector</a>
           <a mat-list-item>Amiibos API</a>
           <!--<a mat-list-item>Docker Explorer</a>-->
+          <a mat-list-item [routerLink]="['projects/holiday-card']" routerLinkActive="nav-link-active">Holiday Card</a>
 
           <h3 matSubHeader>Games</h3>
           <a mat-list-item [routerLink]="['games/stf']" routerLinkActive="nav-link-active">STF</a>

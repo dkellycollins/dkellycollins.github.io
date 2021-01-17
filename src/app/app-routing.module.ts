@@ -11,9 +11,14 @@ const routes: Routes = [
     component: ResumePage
   },
   {
+    path: 'projects/holiday-card',
+    component: FramePage,
+    data: { src: 'https://holiday-card.dkellycollins.info'}
+  },
+  {
     path: 'games/stf', 
     component: FramePage, 
-    data: { src: 'https://dkellycollins.github.io/STF' }
+    data: { src: 'https://github.dkellycollins.info/STF' }
   },
   {
     path: 'slides/javascript-not-javascript',
@@ -35,7 +40,6 @@ const routes: Routes = [
     component: FramePage,
     data: { src: 'https://github.dkellycollins.info/talk-developing-with-docker/#/' }
   },
-
   { path: '**', redirectTo: 'about/resume' }
 ];
 
