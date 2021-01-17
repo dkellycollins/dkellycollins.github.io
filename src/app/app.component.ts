@@ -16,6 +16,10 @@ declare function gtag(...args: Array<any>): void;
           <a mat-list-item [routerLink]="['about/resume']" routerLinkActive="nav-link-active">Resume</a>
 
           <h3 matSubHeader>Projects</h3>
+          <a mat-list-item href="https://amiibos.dkellycollins.info" target="_blank">
+            <mat-icon>launch</mat-icon>
+            <span>Amiibos Collector</span>
+          </a>
           <!--<a mat-list-item>Amiibos Collector</a>-->
           <!--<a mat-list-item>Amiibos API</a>-->
           <!--<a mat-list-item>Docker Explorer</a>-->
@@ -42,7 +46,8 @@ declare function gtag(...args: Array<any>): void;
   styles: [
     `:host { display: flex; flex-direction: column; height: 100% }`,
     `.app-container { flex: 1 1 auto; }`,
-    `.nav { padding-left: 16px; }`
+    `.nav { padding-left: 16px; }`,
+    `.mat-icon { padding-right: 8px; }`
   ]
 })
 export class AppComponent implements OnInit {
