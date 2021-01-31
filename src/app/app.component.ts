@@ -47,7 +47,8 @@ declare function gtag(...args: Array<any>): void;
     `:host { display: flex; flex-direction: column; height: 100% }`,
     `.app-container { flex: 1 1 auto; }`,
     `.nav { padding-left: 16px; }`,
-    `.mat-icon { padding-right: 8px; }`
+    `.mat-icon { padding-right: 8px; }`,
+    `.mat-drawer-content { overflow-y: hidden; }`
   ]
 })
 export class AppComponent implements OnInit {

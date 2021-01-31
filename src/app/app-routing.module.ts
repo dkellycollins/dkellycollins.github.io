@@ -2,13 +2,12 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { FrameModule } from './pages/frame/frame.module';
 import { FramePage } from './pages/frame/frame.page';
-import { ResumeModule } from './pages/resume/resume.module';
-import { ResumePage } from './pages/resume/resume.page';
 
 const routes: Routes = [
   {
     path: 'about/resume',
-    component: ResumePage
+    component: FramePage,
+    data: { src: 'https://resume.dkellycollins.info' }
   },
   {
     path: 'projects/holiday-card',
@@ -46,8 +45,7 @@ const routes: Routes = [
 @NgModule({
   imports: [
     RouterModule.forRoot(routes),
-    FrameModule,
-    ResumeModule
+    FrameModule
   ],
   exports: [RouterModule]
 })
