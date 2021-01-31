@@ -1,14 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-import { Event, NavigationEnd, Router } from '@angular/router';
-import { filter } from 'rxjs/operators';
+import { ActivationEnd, Event, NavigationEnd, Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { filter, map, tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
+import { PageActionModel } from './models/page-action.model';
 
 declare function gtag(...args: Array<any>): void;
 
 @Component({
   selector: 'app-root',
   template: `
-    <mat-toolbar color="primary">Portfolio</mat-toolbar>
+    <mat-toolbar color="primary">
+      <span>Portfolio</span>
+      <span class="toolbar-spacer"></span>
+      <ng-container *ngFor="let action of actions$ | async">
+        <button mat-icon-button (click)="onActionClick(action)">
+          <mat-icon>{{action.icon}}</mat-icon>
+        </button>
+      </ng-container>
+    </mat-toolbar>
     <mat-drawer-container class="app-container">
       <mat-drawer mode="side" opened>
         <mat-nav-list class="nav">
@@ -45,6 +55,7 @@ declare function gtag(...args: Array<any>): void;
   `,
   styles: [
     `:host { display: flex; flex-direction: column; height: 100% }`,
+    `.toolbar-spacer { flex: 1 1 auto }`,
     `.app-container { flex: 1 1 auto; }`,
     `.nav { padding-left: 16px; }`,
     `.mat-icon { padding-right: 8px; }`,
@@ -53,9 +64,17 @@ declare function gtag(...args: Array<any>): void;
 })
 export class AppComponent implements OnInit {
 
+  public actions$: Observable<Array<PageActionModel>>;
+
   constructor(
     private readonly router: Router
-  ) { }
+  ) {
+    this.actions$ = this.router.events
+      .pipe(
+        filter((event: Event): event is ActivationEnd => event instanceof ActivationEnd),
+        map(event => event.snapshot.data.actions || [])
+      );
+  }
 
   public ngOnInit(): void {
     if (!!environment.analytics.code) {
@@ -65,5 +84,9 @@ export class AppComponent implements OnInit {
           gtag('config', environment.analytics.code, { 'page_path': event.urlAfterRedirects })
         });
     }
+  }
+
+  public onActionClick(action: PageActionModel): void {
+    action.onClick();
   }
 }
