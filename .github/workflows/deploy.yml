@@ -1,6 +1,7 @@
 name: Deploy Workflow
 
-on: 
+on:
+  workflow_dispatch:
   push:
     branches:
       - master
