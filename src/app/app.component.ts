@@ -46,6 +46,7 @@ declare function gtag(...args: Array<any>): void;
           <a mat-list-item [routerLink]="['slides/managing-state-in-react']" routerLinkActive="nav-link-active">Managing state with React</a>
           <a mat-list-item [routerLink]="['slides/developing-with-docker']" routerLinkActive="nav-link-active">Developing with Docker</a>
           <a mat-list-item [routerLink]="['slides/angular-cucumber-e2e']" routerLinkActive="nav-link-active">E2E Testing with Angular and Cucumber</a>
+          <a mat-list-item [routerLink]="['slides/what-can-the-browser-do']" routerLinkActive="nav-link-active">What can the browser do?</a>
         </mat-nav-list>
       </mat-drawer>
       <mat-drawer-content>

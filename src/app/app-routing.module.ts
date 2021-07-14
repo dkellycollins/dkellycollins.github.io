@@ -25,6 +25,7 @@ const routes: Routes = [
   frameRoute('slides/managing-state-in-react',   'https://github.dkellycollins.info/javascript-not-javascript/index.html#/'),
   frameRoute('slides/angular-cucumber-e2e',      'https://github.dkellycollins.info/angular-cucumber-e2e/#/'),
   frameRoute('slides/developing-with-docker',    'https://github.dkellycollins.info/talk-developing-with-docker/#/'),
+  frameRoute('slides/what-can-the-browser-do',   'https://github.dkellycollins.info/conference-browser/'),
   { path: '**', redirectTo: 'about/resume' }
 ];
 
